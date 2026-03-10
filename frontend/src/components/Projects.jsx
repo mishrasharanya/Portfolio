@@ -12,7 +12,7 @@ const Projects = () => {
       description: 'Deep learning pipeline generating real-time voice captions from videos, achieving BLEU score 0.7. Combined object and action recognition models (YOLO, ResNet-35) to enhance video accessibility.',
       tech: ['Python', 'PyTorch', 'YOLO', 'ResNet-35', 'Google TTS API', 'Computer Vision'],
       image: 'https://images.unsplash.com/photo-1680783954745-3249be59e527',
-      github: 'https://github.com/Obsarian/Audio-Description-of-Videos',
+      github: 'https://github.com/Obsarian/Audio-Description-of-Videos_Capstone',
       paper: 'https://ieeexplore.ieee.org/document/10544216',
       tag: 'Published in IEEE 2024'
     },
@@ -28,7 +28,7 @@ const Projects = () => {
       description: 'Financial forecasting platform combining GARCH and Monte Carlo methods, achieving ~85% R² and <0.02 MAE in volatility prediction. Integrated LangChain for interpretable forecast summaries and automated decision support.',
       tech: ['Python', 'Streamlit', 'GARCH', 'Monte Carlo', 'yFinance', 'LangChain', 'Time Series'],
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
-      github: 'https://github.com/mishrasharanya/Forequest-Forecast',
+      github: 'https://github.com/mishrasharanya/Forequest-Forecast_Smarter',
       tag: 'Live on Streamlit'
     },
     {
