@@ -102,7 +102,7 @@ const Contact = () => {
                 Get a comprehensive overview of my experience, skills, and projects in a traditional resume format.
               </p>
               <a
-                href="https://customer-assets.emergentagent.com/job_data-science-hub-25/artifacts/vawwffv1_SharanyaMishra-Resume.pdf"
+                href="/SharanyaMishra-Resume.pdf"
                 download="Sharanya_Mishra_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
