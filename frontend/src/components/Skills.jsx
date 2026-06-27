@@ -6,38 +6,92 @@ const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const skillCategories = [
-    {
-      icon: Code,
-      title: 'Programming',
-      skills: ['Python', 'R', 'SQL', 'C++', 'JavaScript', 'MATLAB']
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      skills: ['Deep Learning', 'NLP', 'Computer Vision', 'Time-Series Forecasting', 'PyTorch', 'Feature Engineering']
-    },
-    {
-      icon: Database,
-      title: 'Data Analysis',
-      skills: ['Statistical Inference', 'Hypothesis Testing', 'A/B Testing', 'Process Optimization', 'Pandas', 'NumPy']
-    },
-    {
-      icon: BarChart3,
-      title: 'Visualization & BI',
-      skills: ['Tableau', 'Power BI', 'Matplotlib', 'Seaborn', 'Plotly', 'Excel Advanced']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & Big Data',
-      skills: ['AWS (S3, EC2, SageMaker)', 'Azure', 'PySpark', 'Hadoop', 'Docker', 'Kubernetes']
-    },
-    {
-      icon: GitBranch,
-      title: 'Tools & Frameworks',
-      skills: ['Git', 'Jenkins', 'ARIMA/SARIMA', 'GARCH', 'LangChain', 'Streamlit']
-    }
-  ];
+    const skillCategories = [
+      {
+        icon: Code,
+        title: 'Programming & Development',
+        skills: [
+          'Python',
+          'SQL',
+          'R',
+          'JavaScript',
+          'React',
+          'Node.js',
+          'C++',
+          'MATLAB'
+        ]
+      },
+      {
+        icon: Brain,
+        title: 'AI & Machine Learning',
+        skills: [
+          'Machine Learning',
+          'Deep Learning',
+          'NLP',
+          'Computer Vision',
+          'LLMs',
+          'Generative AI',
+          'PyTorch',
+          'scikit-learn'
+        ]
+      },
+      {
+        icon: Database,
+        title: 'Data Engineering & Analytics',
+        skills: [
+          'Pandas',
+          'NumPy',
+          'PySpark',
+          'Hadoop',
+          'ETL Pipelines',
+          'Data Cleaning',
+          'A/B Testing',
+          'Statistical Analysis'
+        ]
+      },
+      {
+        icon: BarChart3,
+        title: 'Forecasting & Quantitative Modeling',
+        skills: [
+          'ARIMA',
+          'SARIMA',
+          'GARCH',
+          'Monte Carlo',
+          'Time Series',
+          'Feature Engineering',
+          'Model Validation',
+          'Optimization'
+        ]
+      },
+      {
+        icon: Cloud,
+        title: 'Cloud & Deployment',
+        skills: [
+          'AWS',
+          'Azure',
+          'Docker',
+          'Kubernetes',
+          'Git',
+          'GitHub',
+          'Vercel',
+          'Streamlit'
+        ]
+      },
+      {
+        icon: GitBranch,
+        title: 'AI Frameworks & Visualization',
+        skills: [
+          'LangChain',
+          'Groq',
+          'OpenAI API',
+          'spaCy',
+          'TensorFlow',
+          'Plotly',
+          'Tableau',
+          'Power BI'
+        ]
+      }
+    ];
 
   return (
     <section id="skills" ref={ref} className="py-24 bg-[#0A0A0A]">
