@@ -1,0 +1,164 @@
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { ExternalLink, Github } from 'lucide-react';
+
+const Projects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const projects = [
+        {
+      title: 'HerWay - Urban Analytics Platform',
+      description:
+        'Built a multi-source urban analytics platform combining 1,000+ Reddit community posts, 150k+ Chicago 311 service requests, and crime datasets across 77 Chicago neighborhoods. Developed NLP pipelines, an interactive Leaflet-based map, and an AI-powered chatbot for neighborhood insights.',
+      tech: ['Python', 'React', 'Leaflet', 'OpenAI API', 'spaCy', 'NLP', 'Data Visualization', 'Chatbot'],
+      image: 'https://images.unsplash.com/photo-1674027444485-cec3da58eef4',
+      github: 'https://github.com/mishrasharanya/HerWay-Soremo',
+      demo: 'https://her-way-soremo.vercel.app/',
+      tag: 'SoReMo Fellowship'
+    },
+            {
+      title: 'ForeQuest - AI-Powered Financial Forecasting Platform',
+      description:
+        'Built an end-to-end financial forecasting platform combining ARIMA, GARCH, Monte Carlo simulation, and option pricing models with an AI-powered financial assistant. Integrated Groq-hosted LLMs to generate forecast explanations, volatility insights, risk analysis, and interactive question-answering, transforming quantitative outputs into actionable investment insights through a deployed Streamlit application.',
+      tech: [
+        'Python',
+        'Streamlit',
+        'GARCH',
+        'Monte Carlo',
+        'Groq',
+        'LLMs',
+        'Financial Analytics',
+        'Time Series'
+      ],
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
+      github: 'https://github.com/mishrasharanya/Forequest-Forecast_Smarter',
+      demo: 'https://forequest.streamlit.app/',
+      tag: 'AI + Financial Analytics'
+    },
+    {
+      title: 'OptiWeb - Trajectory Optimization Platform',
+      description:
+        'Led development of a browser-based robotics trajectory optimization platform that generates solver-ready AMPL models. Built support for robot systems, custom constraints, Runge-Kutta methods, NEOS solver workflows, and benchmarking across 50+ optimization solvers. Presented at the Midwest Robotics Workshop.',
+      tech: ['React', 'Node.js', 'AMPL', 'NEOS', 'Robotics', 'Optimization', 'JavaScript', 'LLMs'],
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
+      tag: 'Midwest Robotics Workshop'
+    },
+    
+    {
+      title: 'Audio Description for the Visually Impaired',
+      description:
+        'Developed a real-time video captioning pipeline using YOLO, ResNet-35, and Google Text-to-Speech to generate audio descriptions for visually impaired users. Combined object detection and action recognition to improve scene understanding and achieved a BLEU score of 0.7.',
+      tech: ['Python', 'PyTorch', 'YOLO', 'ResNet-35', 'Google TTS API', 'Computer Vision'],
+      image: 'https://images.unsplash.com/photo-1680783954745-3249be59e527',
+      github: 'https://github.com/Obsarian/Audio-Description-of-Videos_Capstone',
+      paper: 'https://ieeexplore.ieee.org/document/10544216',
+      tag: 'IEEE Publication'
+    }
+
+  ];
+
+  return (
+    <section id="projects" ref={ref} className="py-24 bg-black">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="inline-block px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-none mb-6">
+            <span className="text-cyan-400 font-semibold text-sm tracking-wide">MY WORK</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-16">
+            FEATURED <span className="text-cyan-400">PROJECTS</span>
+          </h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              className="group relative bg-white/5 border border-white/10 overflow-hidden hover:border-cyan-400/50 transition-all duration-300"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                <div className="absolute top-4 right-4 px-3 py-1 bg-cyan-400 text-black text-xs font-bold">
+                  {project.tag}
+                </div>
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-400 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-white/5 border border-white/10 text-xs text-gray-300 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+                <div className="flex items-center gap-3 flex-wrap">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 hover:bg-cyan-400 hover:border-cyan-400 hover:text-black transition-all duration-300"
+                    >
+                      <Github size={16} />
+                      <span className="text-sm font-medium">Code</span>
+                    </a>
+                  )}
+
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-cyan-400 text-black hover:bg-cyan-300 transition-all duration-300"
+                    >
+                      <ExternalLink size={16} />
+                      <span className="text-sm font-semibold">Live Demo</span>
+                    </a>
+                  )}
+
+                  {project.paper && (
+                    <a
+                      href={project.paper}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-cyan-400 text-black hover:bg-cyan-300 transition-all duration-300"
+                    >
+                      <ExternalLink size={16} />
+                      <span className="text-sm font-semibold">Paper</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
