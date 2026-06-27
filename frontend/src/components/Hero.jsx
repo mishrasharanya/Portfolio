@@ -57,7 +57,7 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-gray-300 mb-4 font-light"
             >
-              Data Science Graduate Student
+              Data Science Graduate
             </motion.p>
 
             <motion.p
@@ -131,9 +131,9 @@ const Hero = () => {
             <div className="relative">
               <div className="w-full h-[600px] border-4 border-cyan-400/20 overflow-hidden bg-gray-900">
                 <img
-                  src="https://customer-assets.emergentagent.com/job_data-science-hub-25/artifacts/rji6x8v3_DSC_5246.jpg"
+                  src="sharanya-headshot.png"
                   alt="Sharanya Mishra"
-                  className="w-full h-full object-cover object-center brightness-90"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               </div>
