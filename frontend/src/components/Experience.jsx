@@ -20,17 +20,17 @@ const Experience = () => {
       ]
     },
     {
-    title: 'Data Science Consultant / Project Lead',
-    company: 'LabelMaster Practicum',
-    location: 'Chicago, IL',
-    period: 'January 2026 - May 2026',
-    description: [
-      'Analyzed multi-year customer, transaction, product, and location datasets from 2012-2026 to study churn, retention, and revenue concentration',
-      'Identified account concentration risk by showing active customers declined while revenue per customer increased',
-      'Built customer segmentation tiers using revenue contribution, purchase activity, geography, and dormant-account behavior',
-      'Presented stakeholder-ready recommendations for retention campaigns, geographic targeting, and customer reactivation strategy'
-    ]
-  },
+      title: 'Data Science Consultant / Project Lead',
+      company: 'LabelMaster Practicum',
+      location: 'Chicago, IL',
+      period: 'January 2026 - May 2026',
+      description: [
+        'Analyzed multi-year customer, transaction, product, and location datasets from 2012-2026 to study churn, retention, and revenue concentration',
+        'Identified account concentration risk by showing active customers declined while revenue per customer increased',
+        'Built customer segmentation tiers using revenue contribution, purchase activity, geography, and dormant-account behavior',
+        'Presented stakeholder-ready recommendations for retention campaigns, geographic targeting, and customer reactivation strategy'
+      ]
+    },
     {
       title: 'Data Classification - Spring Intern',
       company: 'Aptos Retail',
@@ -70,44 +70,48 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" ref={ref} className="py-24 bg-[#0A0A0A]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="experience" ref={ref} className="py-16 md:py-24 bg-[#0A0A0A]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
+          className="text-center lg:text-left"
         >
           <div className="inline-block px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-none mb-6">
             <span className="text-cyan-400 font-semibold text-sm tracking-wide">MY JOURNEY</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-12 md:mb-16">
             WORK <span className="text-cyan-400">EXPERIENCE</span>
           </h2>
         </motion.div>
 
         <div className="relative">
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-cyan-400/30"></div>
+          <div className="absolute left-0 sm:left-4 md:left-8 top-0 bottom-0 w-0.5 bg-cyan-400/30"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.title}
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="relative pl-8 md:pl-24"
+                className="relative pl-8 sm:pl-12 md:pl-24"
               >
-                <div className="absolute left-0 md:left-8 top-0 w-4 h-4 bg-cyan-400 rounded-full transform -translate-x-[7px] border-4 border-[#0A0A0A]"></div>
+                <div className="absolute left-0 sm:left-4 md:left-8 top-0 w-4 h-4 bg-cyan-400 rounded-full transform -translate-x-[7px] border-4 border-[#0A0A0A]"></div>
 
-                <div className="bg-white/5 border border-white/10 p-6 md:p-8 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                <div className="bg-white/5 border border-white/10 p-4 sm:p-6 md:p-8 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{exp.title}</h3>
-                      <div className="flex items-center gap-2 text-cyan-400 font-semibold mb-2">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        {exp.title}
+                      </h3>
+                      <div className="flex items-center gap-2 text-cyan-400 font-semibold mb-2 text-sm sm:text-base">
                         <Briefcase size={18} />
                         <span>{exp.company}</span>
                       </div>
                     </div>
+
                     <div className="flex items-center gap-2 text-gray-400 text-sm">
                       <Calendar size={16} />
                       <span>{exp.period}</span>
@@ -116,7 +120,7 @@ const Experience = () => {
 
                   <ul className="space-y-2">
                     {exp.description.map((item, idx) => (
-                      <li key={idx} className="text-gray-300 flex items-start gap-3">
+                      <li key={idx} className="text-sm sm:text-base text-gray-300 flex items-start gap-3">
                         <span className="text-cyan-400 mt-1.5">▸</span>
                         <span>{item}</span>
                       </li>

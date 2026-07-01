@@ -10,6 +10,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -24,6 +25,7 @@ const Navbar = () => {
 
   const scrollToSection = (e, href) => {
     e.preventDefault();
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -36,12 +38,18 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/90 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
+        isScrolled || isMobileMenuOpen
+          ? 'bg-black/90 backdrop-blur-lg border-b border-white/10'
+          : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <a href="#" className="text-2xl font-bold tracking-tight">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <a
+            href="#"
+            onClick={(e) => scrollToSection(e, 'body')}
+            className="text-xl sm:text-2xl font-bold tracking-tight"
+          >
             <span className="text-white">Sharanya </span>
             <span className="text-cyan-400">Mishra</span>
           </a>
@@ -58,6 +66,7 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
+
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, '#contact')}
@@ -68,35 +77,38 @@ const Navbar = () => {
           </div>
 
           <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white"
+            className="md:hidden p-2 text-white border border-white/10 bg-white/5"
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
       {isMobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-black border-t border-white/10"
+          className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10"
         >
-          <div className="px-6 py-4 space-y-3">
+          <div className="px-4 sm:px-6 py-5 space-y-3">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="block py-2 text-gray-300 hover:text-white transition-colors"
+                className="block w-full py-3 text-center text-gray-300 hover:text-cyan-400 border border-white/10 bg-white/5 transition-colors"
               >
                 {item.label}
               </a>
             ))}
+
             <a
               href="#contact"
               onClick={(e) => scrollToSection(e, '#contact')}
-              className="block w-full px-6 py-2.5 bg-cyan-400 text-black font-semibold text-center rounded-none hover:bg-cyan-300 transition-colors"
+              className="block w-full px-6 py-3 bg-cyan-400 text-black font-semibold text-center rounded-none hover:bg-cyan-300 transition-colors"
             >
               Let's Talk
             </a>

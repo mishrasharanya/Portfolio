@@ -7,7 +7,7 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const projects = [
-        {
+    {
       title: 'HerWay - Urban Analytics Platform',
       description:
         'Built a multi-source urban analytics platform combining 1,000+ Reddit community posts, 150k+ Chicago 311 service requests, and crime datasets across 77 Chicago neighborhoods. Developed NLP pipelines, an interactive Leaflet-based map, and an AI-powered chatbot for neighborhood insights.',
@@ -17,7 +17,7 @@ const Projects = () => {
       demo: 'https://her-way-soremo.vercel.app/',
       tag: 'SoReMo Fellowship'
     },
-            {
+    {
       title: 'ForeQuest - AI-Powered Financial Forecasting Platform',
       description:
         'Built an end-to-end financial forecasting platform combining ARIMA, GARCH, Monte Carlo simulation, and option pricing models with an AI-powered financial assistant. Integrated Groq-hosted LLMs to generate forecast explanations, volatility insights, risk analysis, and interactive question-answering, transforming quantitative outputs into actionable investment insights through a deployed Streamlit application.',
@@ -44,7 +44,6 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
       tag: 'Midwest Robotics Workshop'
     },
-    
     {
       title: 'Audio Description for the Visually Impaired',
       description:
@@ -55,26 +54,26 @@ const Projects = () => {
       paper: 'https://ieeexplore.ieee.org/document/10544216',
       tag: 'IEEE Publication'
     }
-
   ];
 
   return (
-    <section id="projects" ref={ref} className="py-24 bg-black">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="projects" ref={ref} className="py-16 md:py-24 bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
+          className="text-center lg:text-left"
         >
           <div className="inline-block px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-none mb-6">
             <span className="text-cyan-400 font-semibold text-sm tracking-wide">MY WORK</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-12 md:mb-16">
             FEATURED <span className="text-cyan-400">PROJECTS</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -83,39 +82,39 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group relative bg-white/5 border border-white/10 overflow-hidden hover:border-cyan-400/50 transition-all duration-300"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-52 sm:h-64 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
-                <div className="absolute top-4 right-4 px-3 py-1 bg-cyan-400 text-black text-xs font-bold">
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 px-2 sm:px-3 py-1 bg-cyan-400 text-black text-[10px] sm:text-xs font-bold">
                   {project.tag}
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-400 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-white/5 border border-white/10 text-xs text-gray-300 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-white/5 border border-white/10 text-xs text-gray-300 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-                <div className="flex items-center gap-3 flex-wrap">
+                <div className="flex flex-wrap justify-center md:justify-start gap-3">
                   {project.github && (
                     <a
                       href={project.github}

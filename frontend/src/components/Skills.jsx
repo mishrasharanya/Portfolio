@@ -6,110 +6,59 @@ const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-    const skillCategories = [
-      {
-        icon: Code,
-        title: 'Programming & Development',
-        skills: [
-          'Python',
-          'SQL',
-          'R',
-          'JavaScript',
-          'React',
-          'Node.js',
-          'C++',
-          'MATLAB'
-        ]
-      },
-      {
-        icon: Brain,
-        title: 'AI & Machine Learning',
-        skills: [
-          'Machine Learning',
-          'Deep Learning',
-          'NLP',
-          'Computer Vision',
-          'LLMs',
-          'Generative AI',
-          'PyTorch',
-          'scikit-learn'
-        ]
-      },
-      {
-        icon: Database,
-        title: 'Data Engineering & Analytics',
-        skills: [
-          'Pandas',
-          'NumPy',
-          'PySpark',
-          'Hadoop',
-          'ETL Pipelines',
-          'Data Cleaning',
-          'A/B Testing',
-          'Statistical Analysis'
-        ]
-      },
-      {
-        icon: BarChart3,
-        title: 'Forecasting & Quantitative Modeling',
-        skills: [
-          'ARIMA',
-          'SARIMA',
-          'GARCH',
-          'Monte Carlo',
-          'Time Series',
-          'Feature Engineering',
-          'Model Validation',
-          'Optimization'
-        ]
-      },
-      {
-        icon: Cloud,
-        title: 'Cloud & Deployment',
-        skills: [
-          'AWS',
-          'Azure',
-          'Docker',
-          'Kubernetes',
-          'Git',
-          'GitHub',
-          'Vercel',
-          'Streamlit'
-        ]
-      },
-      {
-        icon: GitBranch,
-        title: 'AI Frameworks & Visualization',
-        skills: [
-          'LangChain',
-          'Groq',
-          'OpenAI API',
-          'spaCy',
-          'TensorFlow',
-          'Plotly',
-          'Tableau',
-          'Power BI'
-        ]
-      }
-    ];
+  const skillCategories = [
+    {
+      icon: Code,
+      title: 'Programming & Development',
+      skills: ['Python', 'SQL', 'R', 'JavaScript', 'React', 'Node.js', 'C++', 'MATLAB']
+    },
+    {
+      icon: Brain,
+      title: 'AI & Machine Learning',
+      skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'LLMs', 'Generative AI', 'PyTorch', 'scikit-learn']
+    },
+    {
+      icon: Database,
+      title: 'Data Engineering & Analytics',
+      skills: ['Pandas', 'NumPy', 'PySpark', 'Hadoop', 'ETL Pipelines', 'Data Cleaning', 'A/B Testing', 'Statistical Analysis']
+    },
+    {
+      icon: BarChart3,
+      title: 'Forecasting & Quantitative Modeling',
+      skills: ['ARIMA', 'SARIMA', 'GARCH', 'Monte Carlo', 'Time Series', 'Feature Engineering', 'Model Validation', 'Optimization']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud & Deployment',
+      skills: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Git', 'GitHub', 'Vercel', 'Streamlit']
+    },
+    {
+      icon: GitBranch,
+      title: 'AI Frameworks & Visualization',
+      skills: ['LangChain', 'Groq', 'OpenAI API', 'spaCy', 'TensorFlow', 'Plotly', 'Tableau', 'Power BI']
+    }
+  ];
 
   return (
-    <section id="skills" ref={ref} className="py-24 bg-[#0A0A0A]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="skills" ref={ref} className="py-16 md:py-24 bg-[#0A0A0A]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
+          className="text-center lg:text-left"
         >
           <div className="inline-block px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-none mb-6">
-            <span className="text-cyan-400 font-semibold text-sm tracking-wide">TECHNICAL EXPERTISE</span>
+            <span className="text-cyan-400 font-semibold text-sm tracking-wide">
+              TECHNICAL EXPERTISE
+            </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-12 md:mb-16">
             SKILLS & <span className="text-cyan-400">TECHNOLOGIES</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
@@ -118,16 +67,16 @@ const Skills = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/5 border border-white/10 p-6 hover:border-cyan-400/50 transition-all duration-300 group"
+                className="bg-white/5 border border-white/10 p-5 sm:p-6 hover:border-cyan-400/50 transition-all duration-300 group"
               >
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                   <div className="p-3 bg-cyan-400/10 border border-cyan-400/30 group-hover:bg-cyan-400 transition-all duration-300">
                     <Icon className="text-cyan-400 group-hover:text-black transition-colors" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-white">{category.title}</h3>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap justify-center md:justify-start gap-2">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}

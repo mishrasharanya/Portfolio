@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4 sm:px-6">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-cyan-900/30 z-10"></div>
         <img
@@ -24,8 +24,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -37,14 +37,16 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="inline-block px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-none mb-6"
             >
-              <span className="text-cyan-400 font-semibold text-sm tracking-wide">DATA SCIENCE • MACHINE LEARNING • AI</span>
+              <span className="text-cyan-400 font-semibold text-sm tracking-wide">
+                DATA SCIENCE • MACHINE LEARNING • AI
+              </span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
             >
               SHARANYA
               <br />
@@ -64,9 +66,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg text-gray-400 mb-8 max-w-xl leading-relaxed"
+              className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Transforming complex data into actionable insights through advanced ML, AI, and analytics. 
+              Transforming complex data into actionable insights through advanced ML, AI, and analytics.
               Currently researching trajectory optimization and building reproducible AI systems at IIT.
             </motion.p>
 
@@ -74,7 +76,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
             >
               <button
                 onClick={scrollToProjects}
@@ -95,7 +97,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
-              className="flex items-center gap-4"
+              className="flex items-center justify-center lg:justify-start gap-4"
             >
               <a
                 href="https://github.com/mishrasharanya"
@@ -129,15 +131,16 @@ const Hero = () => {
             className="relative w-full mt-12 lg:mt-0"
           >
             <div className="relative">
-              <div className="w-full h-[600px] border-4 border-cyan-400/20 overflow-hidden bg-gray-900">
+              <div className="w-full max-w-sm sm:max-w-md lg:max-w-none h-[420px] sm:h-[520px] lg:h-[600px] mx-auto border-4 border-cyan-400/20 overflow-hidden bg-gray-900">
                 <img
-                  src="sharanya-headshot.png"
+                  src="/images/sharanya-headshot.png"
                   alt="Sharanya Mishra"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-64 h-auto bg-cyan-400/20 backdrop-blur-sm border border-cyan-400/30 p-6">
+
+              <div className="absolute -bottom-6 left-1/2 lg:left-auto lg:right-6 transform -translate-x-1/2 lg:translate-x-0 w-64 h-auto bg-cyan-400/20 backdrop-blur-sm border border-cyan-400/30 p-4 sm:p-6 text-center lg:text-left">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">Data and AI Builder</div>
                 <div className="text-sm text-gray-300">3.7 GPA • MS Data Science</div>
                 <div className="text-sm text-gray-400 mt-1">Illinois Institute of Technology</div>
