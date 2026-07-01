@@ -133,7 +133,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-full max-w-sm sm:max-w-md lg:max-w-none h-[420px] sm:h-[520px] lg:h-[600px] mx-auto border-4 border-cyan-400/20 overflow-hidden bg-gray-900">
                 <img
-                  src="/public/sharanya-headshot.png"
+                  src="/sharanya-headshot.png"
                   alt="Sharanya Mishra"
                   className="w-full h-full object-cover object-center"
                 />
