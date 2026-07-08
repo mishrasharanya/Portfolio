@@ -8,10 +8,27 @@ const Projects = () => {
 
   const projects = [
     {
+<<<<<<< HEAD
       title: 'HerWay - Urban Analytics Platform',
       description:
         'Built a multi-source urban analytics platform combining 1,000+ Reddit community posts, 150k+ Chicago 311 service requests, and crime datasets across 77 Chicago neighborhoods. Developed NLP pipelines, an interactive Leaflet-based map, and an AI-powered chatbot for neighborhood insights.',
       tech: ['Python', 'React', 'Leaflet', 'OpenAI API', 'spaCy', 'NLP', 'Data Visualization', 'Chatbot'],
+=======
+      title: 'InsightAI - Production RAG Agent',
+      description:
+        'Production-style 4-agent RAG system for Google Workspace with semantic retrieval, grounded responses, confidence scoring, PII redaction, and OAuth-based access. Deployed using Vercel, Render, Supabase pgvector, and Groq/Llama.',
+      tech: ['React', 'FastAPI', 'Supabase', 'pgvector', 'Groq', 'Llama', 'OAuth 2.0', 'Python'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
+      github: 'https://github.com/mishrasharanya/Insight--AI-agent',
+      demo: 'https://insight-ai-agent-phi.vercel.app/',
+      tag: 'Agentic AI'
+    },
+    {
+      title: 'HerWay - Urban Analytics Research',
+      description:
+        'Urban analytics research project analyzing community narratives, 150k+ Chicago 311 service requests, and crime data across 77 neighborhoods. Built with NLP and OpenAI-powered analysis, featuring an interactive map and chatbot interface for neighborhood insights.',
+      tech: ['Python', 'React', 'Leaflet', 'OpenAI API', 'NLP', 'spaCy', 'Urban Analytics', 'Chatbot'],
+>>>>>>> df70a5bd (updating projects)
       image: 'https://images.unsplash.com/photo-1674027444485-cec3da58eef4',
       github: 'https://github.com/mishrasharanya/HerWay-Soremo',
       demo: 'https://her-way-soremo.vercel.app/',
@@ -20,6 +37,7 @@ const Projects = () => {
     {
       title: 'ForeQuest - AI-Powered Financial Forecasting Platform',
       description:
+<<<<<<< HEAD
         'Built an end-to-end financial forecasting platform combining ARIMA, GARCH, Monte Carlo simulation, and option pricing models with an AI-powered financial assistant. Integrated Groq-hosted LLMs to generate forecast explanations, volatility insights, risk analysis, and interactive question-answering, transforming quantitative outputs into actionable investment insights through a deployed Streamlit application.',
       tech: [
         'Python',
@@ -31,12 +49,17 @@ const Projects = () => {
         'Financial Analytics',
         'Time Series'
       ],
+=======
+        'Financial forecasting platform combining ARIMA, GARCH, Monte Carlo simulation, option pricing, and Groq-hosted LLMs. Achieved ~85% R² and <0.02 MAE in volatility prediction while delivering explainable market insights through a deployed Streamlit app.',
+      tech: ['Python', 'Streamlit', 'GARCH', 'Monte Carlo', 'Groq', 'LLMs', 'yFinance', 'Time Series'],
+>>>>>>> df70a5bd (updating projects)
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa',
       github: 'https://github.com/mishrasharanya/Forequest-Forecast_Smarter',
       demo: 'https://forequest.streamlit.app/',
       tag: 'AI + Financial Analytics'
     },
     {
+<<<<<<< HEAD
       title: 'OptiWeb - Trajectory Optimization Platform',
       description:
         'Led development of a browser-based robotics trajectory optimization platform that generates solver-ready AMPL models. Built support for robot systems, custom constraints, Runge-Kutta methods, NEOS solver workflows, and benchmarking across 50+ optimization solvers. Presented at the Midwest Robotics Workshop.',
@@ -48,13 +71,41 @@ const Projects = () => {
       title: 'Audio Description for the Visually Impaired',
       description:
         'Developed a real-time video captioning pipeline using YOLO, ResNet-35, and Google Text-to-Speech to generate audio descriptions for visually impaired users. Combined object detection and action recognition to improve scene understanding and achieved a BLEU score of 0.7.',
+=======
+      title: 'Audio Description for the Visually Impaired',
+      description:
+        'Deep learning pipeline generating real-time voice captions from videos, achieving BLEU score 0.7. Combined object and action recognition models using YOLO and ResNet-35 to enhance video accessibility.',
+>>>>>>> df70a5bd (updating projects)
       tech: ['Python', 'PyTorch', 'YOLO', 'ResNet-35', 'Google TTS API', 'Computer Vision'],
       image: 'https://images.unsplash.com/photo-1680783954745-3249be59e527',
       github: 'https://github.com/Obsarian/Audio-Description-of-Videos_Capstone',
       paper: 'https://ieeexplore.ieee.org/document/10544216',
+<<<<<<< HEAD
       tag: 'IEEE Publication'
     }
+=======
+      tag: 'Published in IEEE 2024'
+    },
+    {
+      title: 'OptiWeb - Trajectory Optimization Platform',
+      description:
+        'Browser-based robotics trajectory optimization platform for automated model generation and reproducible experimentation. Implemented cart-pole, five-link biped, and quadruped benchmarks while evaluating convergence across 50+ NEOS solver configurations.',
+      tech: ['React', 'Node.js', 'AMPL', 'NEOS', 'Robotics', 'Optimization', 'JavaScript', 'LLMs'],
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
+      tag: 'Midwest Robotics Workshop'
+    },
+    {
+      title: 'Shoe Classification & Generator System',
+      description:
+        'CNN model for multiclass shoe classification achieving 92% accuracy and F1-score of 0.87. Implemented GAN to generate realistic shoe designs, expanding dataset for creative design exploration.',
+      tech: ['Python', 'PyTorch', 'CNN', 'GAN', 'Deep Learning', 'Computer Vision'],
+      image: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg',
+      github: 'https://github.com/mishrasharanya/Shoe-Classification-using-CNN-and-GAN',
+      tag: 'Deep Learning'
+    },
+>>>>>>> df70a5bd (updating projects)
   ];
+
 
   return (
     <section id="projects" ref={ref} className="py-16 md:py-24 bg-black">
