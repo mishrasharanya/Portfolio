@@ -111,13 +111,8 @@ const Contact = () => {
               </p>
 
               <a
-<<<<<<< HEAD
                 href="/SharanyaMishra_Resume.pdf"
                 download="SharanyaMishra_Resume.pdf"
-=======
-                href="/SharanyaMishra-Resume.pdf"
-                download="Sharanya_Mishra_Resume.pdf"
->>>>>>> f139a92d (Update portfolio)
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 bg-cyan-400 text-black font-bold hover:bg-cyan-300 transition-all duration-300 hover:scale-105 group"
