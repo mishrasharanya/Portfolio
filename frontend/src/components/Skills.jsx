@@ -2,42 +2,115 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Code, Database, Brain, BarChart3, Cloud, GitBranch } from 'lucide-react';
 
-const Skills = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const skillCategories = [
-    {
-      icon: Code,
-      title: 'Programming & Development',
-      skills: ['Python', 'SQL', 'R', 'JavaScript', 'React', 'Node.js', 'C++', 'MATLAB']
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'LLMs', 'Generative AI', 'PyTorch', 'scikit-learn']
-    },
-    {
-      icon: Database,
-      title: 'Data Engineering & Analytics',
-      skills: ['Pandas', 'NumPy', 'PySpark', 'Hadoop', 'ETL Pipelines', 'Data Cleaning', 'A/B Testing', 'Statistical Analysis']
-    },
-    {
-      icon: BarChart3,
-      title: 'Forecasting & Quantitative Modeling',
-      skills: ['ARIMA', 'SARIMA', 'GARCH', 'Monte Carlo', 'Time Series', 'Feature Engineering', 'Model Validation', 'Optimization']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & Deployment',
-      skills: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Git', 'GitHub', 'Vercel', 'Streamlit']
-    },
-    {
-      icon: GitBranch,
-      title: 'AI Frameworks & Visualization',
-      skills: ['LangChain', 'Groq', 'OpenAI API', 'spaCy', 'TensorFlow', 'Plotly', 'Tableau', 'Power BI']
-    }
-  ];
+const skillCategories = [
+  {
+    icon: Code,
+    title: 'Programming',
+    skills: [
+      'Python',
+      'SQL',
+      'R',
+      'JavaScript',
+      'React',
+      'Node.js',
+      'FastAPI',
+      'C++'
+    ]
+  },
+  {
+    icon: Brain,
+    title: 'Artificial Intelligence',
+    skills: [
+      'Machine Learning',
+      'Deep Learning',
+      'Generative AI',
+      'LLMs',
+      'RAG',
+      'Prompt Engineering',
+      'LangChain',
+      'LangGraph',
+      'Multi-Agent Systems',
+      'Computer Vision'
+    ]
+  },
+  {
+    icon: Database,
+    title: 'Data Science & Analytics',
+    skills: [
+      'Statistical Analysis',
+      'Feature Engineering',
+      'A/B Testing',
+      'Predictive Modeling',
+      'Data Cleaning',
+      'Pandas',
+      'NumPy',
+      'scikit-learn',
+      'PyTorch',
+      'TensorFlow'
+    ]
+  },
+  {
+    icon: BarChart3,
+    title: 'Forecasting & Optimization',
+    skills: [
+      'Time Series',
+      'ARIMA',
+      'SARIMA',
+      'GARCH',
+      'Monte Carlo',
+      'Optimization',
+      'AMPL',
+      'NEOS',
+      'Model Validation'
+    ]
+  },
+  {
+    icon: Cloud,
+    title: 'Data Engineering & Cloud',
+    skills: [
+      'ETL Pipelines',
+      'PySpark',
+      'Hadoop',
+      'PostgreSQL',
+      'MongoDB',
+      'AWS',
+      'Azure',
+      'Docker',
+      'Git',
+      'GitHub'
+    ]
+  },
+  {
+    icon: GitBranch,
+    title: 'LLM Infrastructure & Deployment',
+    skills: [
+      'ChromaDB',
+      'Vector Search',
+      'Sentence Transformers',
+      'OpenAI API',
+      'Groq',
+      'REST APIs',
+      'OAuth 2.0',
+      'Google APIs',
+      'Streamlit',
+      'Vercel'
+    ]
+  },
+  {
+    icon: BarChart3,
+    title: 'Visualization & Business Intelligence',
+    skills: [
+      'Tableau',
+      'Power BI',
+      'Plotly',
+      'Matplotlib',
+      'Seaborn',
+      'Excel',
+      'Dashboard Design',
+      'Data Storytelling'
+    ]
+  }
+];
 
   return (
     <section id="skills" ref={ref} className="py-16 md:py-24 bg-[#0A0A0A]">
