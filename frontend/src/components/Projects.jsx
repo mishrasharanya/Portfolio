@@ -47,14 +47,24 @@ const Projects = () => {
       paper: 'https://ieeexplore.ieee.org/document/10544216',
       tag: 'Published in IEEE 2024'
     },
-    {
-      title: 'OptiWeb - Trajectory Optimization Platform',
-      description:
-        'Browser-based robotics trajectory optimization platform for automated model generation and reproducible experimentation. Implemented cart-pole, five-link biped, and quadruped benchmarks while evaluating convergence across 50+ NEOS solver configurations.',
-      tech: ['React', 'Node.js', 'AMPL', 'NEOS', 'Robotics', 'Optimization', 'JavaScript', 'LLMs'],
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
-      tag: 'Midwest Robotics Workshop'
-    },
+{
+  title: 'OptiWeb - Trajectory Optimization Platform',
+  description:
+    'Browser-based robotics trajectory optimization platform for automated model generation and reproducible experimentation. Implemented cart-pole, five-link biped, and quadruped benchmarks while evaluating convergence across 50+ NEOS solver configurations.',
+  tech: ['React', 'Node.js', 'AMPL', 'NEOS', 'Robotics', 'Optimization', 'JavaScript', 'LLMs'],
+  image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
+  demo: 'https://optiweb-smoky.vercel.app/index.html',
+  tag: 'Midwest Robotics Workshop'
+},
+{
+  title: 'Voice AI Travel Planner',
+  description:
+    'Voice-first AI travel agent using ElevenLabs STT/TTS, Groq LLMs, and FastAPI to convert spoken travel preferences into personalized itineraries. Real-time pipeline combining speech-to-text, LLM reasoning, and REST APIs with third-party integrations for transit, accessibility, and trip context.',
+  tech: ['Python', 'FastAPI', 'ElevenLabs', 'Groq', 'LLMs', 'Speech-to-Text', 'Text-to-Speech', 'REST APIs'],
+  image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828',
+  github: 'https://github.com/lulu-chenyang/conversation-to-itinerary',
+  tag: '🏆 Hackathon Best Idea'
+},
     {
       title: 'Shoe Classification & Generator System',
       description:
