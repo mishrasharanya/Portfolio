@@ -53,6 +53,7 @@ const Projects = () => {
     'Browser-based robotics trajectory optimization platform for automated model generation and reproducible experimentation. Implemented cart-pole, five-link biped, and quadruped benchmarks while evaluating convergence across 50+ NEOS solver configurations.',
   tech: ['React', 'Node.js', 'AMPL', 'NEOS', 'Robotics', 'Optimization', 'JavaScript', 'LLMs'],
   image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e',
+  github: "https://github.com/mishrasharanya/Optiweb",
   demo: 'https://optiweb-smoky.vercel.app/index.html',
   tag: 'Midwest Robotics Workshop'
 },
@@ -63,7 +64,7 @@ const Projects = () => {
   tech: ['Python', 'FastAPI', 'ElevenLabs', 'Groq', 'LLMs', 'Speech-to-Text', 'Text-to-Speech', 'REST APIs'],
   image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828',
   github: 'https://github.com/lulu-chenyang/conversation-to-itinerary',
-  tag: '🏆 Hackathon Best Idea'
+  tag: 'Hackathon Best Idea'
 },
     {
       title: 'Shoe Classification & Generator System',
