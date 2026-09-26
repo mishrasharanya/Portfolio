@@ -31,29 +31,6 @@ const Projects = () => {
     },
 
     {
-      title: 'VulnScope - CVE Intelligence & Severity Prediction',
-      description:
-        'Spot potentially severe vulnerabilities before structured scoring catches up. Built an end-to-end CVE intelligence system evaluated on 45,198 unseen 2025 CVEs, achieving 80.5% recall, 0.708 F1 and 0.764 PR-AUC with explainable ML predictions and an evidence-grounded analyst agent.',
-      tech: [
-        'Python',
-        'Machine Learning',
-        'Data Engineering',
-        'NLP',
-        'Explainable AI',
-        'RAG',
-        'Groq',
-        'Streamlit'
-      ],
-      image:
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3',
-      github:
-        'https://github.com/mishrasharanya/VulnScope',
-      demo:
-        'https://vulnscope.streamlit.app/',
-      tag: 'Security ML + AI'
-    },
-
-    {
       title: 'HerWay - Urban Analytics Research',
       description:
         'What if neighborhood safety reflected how people actually experience a city? Analyzed 150K+ crime and 311 records alongside 1,000+ community posts across 77 Chicago neighborhoods, turning fragmented urban data into NLP-powered maps, safety insights and conversational Q&A.',
@@ -75,7 +52,28 @@ const Projects = () => {
         'https://her-way-soremo.vercel.app/',
       tag: 'SoReMo Fellowship'
     },
-
+    {
+      title: 'VulnScope - CVE Intelligence & Severity Prediction',
+      description:
+        'Spot potentially severe vulnerabilities before structured scoring catches up. Built an end-to-end CVE intelligence system evaluated on 45,198 unseen 2025 CVEs, achieving 80.5% recall, 0.708 F1 and 0.764 PR-AUC with explainable ML predictions and an evidence-grounded analyst agent.',
+      tech: [
+        'Python',
+        'Machine Learning',
+        'Data Engineering',
+        'NLP',
+        'Explainable AI',
+        'RAG',
+        'Groq',
+        'Streamlit'
+      ],
+      image:
+        'https://images.unsplash.com/photo-1563986768609-322da13575f3',
+      github:
+        'https://github.com/mishrasharanya/VulnScope',
+      demo:
+        'https://vulnscope.streamlit.app/',
+      tag: 'Security ML + AI'
+    },
     {
       title: 'ForeQuest - AI-Powered Financial Forecasting',
       description:
