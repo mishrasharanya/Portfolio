@@ -1,16 +1,20 @@
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: '-100px'
+  });
 
   const projects = [
     {
-      title: 'InsightAI - Production RAG Agent',
+      title: 'InsightAI - Multi-Agent RAG Platform',
       description:
-        'Turn scattered Google Workspace data into answers you can trust. Built a 4-agent RAG system with semantic retrieval, confidence scoring, PII redaction and OAuth 2.0, combining grounded AI responses with secure Google Drive and Calendar access.',
+        'Built a 4-agent RAG platform that connects Google Drive and Calendar through OAuth 2.0. Implemented semantic retrieval with pgvector, context-aware query routing, confidence scoring and PII redaction to generate grounded responses from personal workspace data.',
       tech: [
         'React',
         'FastAPI',
@@ -31,9 +35,9 @@ const Projects = () => {
     },
 
     {
-      title: 'HerWay - Urban Analytics Research',
+      title: 'HerWay - Urban Safety Analytics',
       description:
-        'What if neighborhood safety reflected how people actually experience a city? Analyzed 150K+ crime and 311 records alongside 1,000+ community posts across 77 Chicago neighborhoods, turning fragmented urban data into NLP-powered maps, safety insights and conversational Q&A.',
+        'Built a neighborhood analytics platform using 150K+ crime and 311 records alongside 1,000+ community posts across 77 Chicago neighborhoods. Developed data cleaning, geographic mapping and NLP workflows to identify neighborhood-level safety patterns and make the results accessible through interactive maps and conversational Q&A.',
       tech: [
         'Python',
         'React',
@@ -52,10 +56,11 @@ const Projects = () => {
         'https://her-way-soremo.vercel.app/',
       tag: 'SoReMo Fellowship'
     },
+
     {
-      title: 'VulnScope - CVE Intelligence & Severity Prediction',
+      title: 'VulnScope - CVE Severity Prediction',
       description:
-        'Spot potentially severe vulnerabilities before structured scoring catches up. Built an end-to-end CVE intelligence system evaluated on 45,198 unseen 2025 CVEs, achieving 80.5% recall, 0.708 F1 and 0.764 PR-AUC with explainable ML predictions and an evidence-grounded analyst agent.',
+        'Built a CVE intelligence pipeline combining vulnerability data processing, severity prediction and model explainability. Evaluated the model on 45,198 unseen 2025 CVEs, achieving 80.5% recall, 0.708 F1 and 0.764 PR-AUC. Added an evidence-grounded analyst agent to investigate vulnerabilities and explain predictions.',
       tech: [
         'Python',
         'Machine Learning',
@@ -74,10 +79,11 @@ const Projects = () => {
         'https://vulnscope.streamlit.app/',
       tag: 'Security ML + AI'
     },
+
     {
-      title: 'ForeQuest - AI-Powered Financial Forecasting',
+      title: 'ForeQuest - Financial Forecasting & Option Pricing',
       description:
-        'Forecast volatility, price options and understand the reasoning behind the numbers. Combined ARIMA, GARCH and Monte Carlo simulation with LLM-powered explanations, achieving ~85% R² and <0.02 MAE in volatility prediction.',
+        'Developed a financial analytics platform combining ARIMA and GARCH models for volatility forecasting with Monte Carlo simulation for option pricing. Achieved ~85% R² and <0.02 MAE in volatility prediction, with interactive visualizations and LLM-generated explanations of forecasting and pricing results.',
       tech: [
         'Python',
         'Streamlit',
@@ -98,9 +104,32 @@ const Projects = () => {
     },
 
     {
+      title: 'SayAway - Voice AI Travel Planner',
+      description:
+        'Built a voice-based travel planner that converts group conversations into structured itineraries. Used local Whisper for transcription, Llama via Ollama for extracting destinations, dates, budgets and accessibility needs, and Zod for schema validation. Integrated nearby place recommendations, distance calculations, browser TTS and Stay22 accommodation search without paid AI inference APIs.',
+      tech: [
+        'Whisper',
+        'Ollama',
+        'Llama',
+        'Zod',
+        'Web Speech API',
+        'Stay22',
+        'Speech-to-Text',
+        'Local AI'
+      ],
+      image:
+        'https://images.unsplash.com/photo-1488646953014-85cb44e25828',
+      github:
+        'https://github.com/mishrasharanya/SayAway',
+      demo:
+        'https://www.loom.com/share/ce0fb83cbeb248a189956ae692fe2348',
+      tag: 'Hackathon Best Use Case'
+    },
+
+    {
       title: 'Audio Description for the Visually Impaired',
       description:
-        'Making video content more accessible through AI. Built a multimodal deep-learning pipeline combining object and action recognition with text-to-speech, achieving a 0.70 BLEU score and resulting in an IEEE 2024 publication.',
+        'Developed a multimodal deep-learning pipeline for generating spoken descriptions of video content. Combined YOLO-based object detection, ResNet-based visual feature extraction, action recognition and text-to-speech. Achieved a 0.70 BLEU score, with the research published at IEEE in 2024.',
       tech: [
         'Python',
         'PyTorch',
@@ -121,7 +150,7 @@ const Projects = () => {
     {
       title: 'OptiWeb - Trajectory Optimization Platform',
       description:
-        'Take robotics optimization from solver scripts to the browser. Built a browser-based platform for automated model generation and benchmarked 50+ solver configurations across cart-pole, 5-link biped and quadruped systems for faster, reproducible optimization research.',
+        'Built a browser-based platform for generating and solving trajectory optimization models using AMPL and NEOS. Benchmarked 50+ solver configurations across cart-pole, 5-link biped and quadruped systems, making it easier to compare solver performance, manage experiments and reproduce optimization results.',
       tech: [
         'React',
         'Node.js',
@@ -142,30 +171,9 @@ const Projects = () => {
     },
 
     {
-      title: 'Voice AI Travel Planner',
-      description:
-        'Plan a trip by simply talking to it. Built a real-time voice AI pipeline combining ElevenLabs STT/TTS, Groq LLMs and FastAPI with transit and accessibility integrations, winning Best Use Case at the Checkout Hackathon.',
-      tech: [
-        'Python',
-        'FastAPI',
-        'ElevenLabs',
-        'Groq',
-        'LLMs',
-        'Speech-to-Text',
-        'Text-to-Speech',
-        'REST APIs'
-      ],
-      image:
-        'https://images.unsplash.com/photo-1488646953014-85cb44e25828',
-      github:
-        'https://github.com/lulu-chenyang/conversation-to-itinerary',
-      tag: 'Hackathon Best Use Case'
-    },
-
-    {
       title: 'Shoe Classification & Generator System',
       description:
-        'From recognizing shoes to generating new designs. Built a CNN achieving 92% multiclass classification accuracy and 0.87 F1, then paired it with a GAN to generate synthetic shoe designs for data augmentation and creative exploration.',
+        'Trained a CNN for multiclass shoe classification, achieving 92% accuracy and a 0.87 F1 score. Extended the project with a GAN to generate synthetic shoe images, combining image classification and generative modeling for product recognition and design exploration.',
       tech: [
         'Python',
         'PyTorch',
@@ -190,6 +198,7 @@ const Projects = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={
@@ -214,6 +223,7 @@ const Projects = () => {
           </h2>
         </motion.div>
 
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -231,6 +241,7 @@ const Projects = () => {
               className="group relative bg-white/5 border border-white/10 overflow-hidden hover:border-cyan-400/50 transition-all duration-300"
             >
 
+              {/* Project Image */}
               <div className="relative h-52 sm:h-64 overflow-hidden">
                 <img
                   src={project.image}
@@ -240,11 +251,13 @@ const Projects = () => {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
 
+                {/* Project Tag */}
                 <div className="absolute top-3 right-3 sm:top-4 sm:right-4 px-2 sm:px-3 py-1 bg-cyan-400 text-black text-[10px] sm:text-xs font-bold">
                   {project.tag}
                 </div>
               </div>
 
+              {/* Project Content */}
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {project.title}
@@ -254,6 +267,7 @@ const Projects = () => {
                   {project.description}
                 </p>
 
+                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
@@ -265,7 +279,10 @@ const Projects = () => {
                   ))}
                 </div>
 
+                {/* Project Links */}
                 <div className="flex flex-wrap justify-center md:justify-start gap-3">
+
+                  {/* GitHub */}
                   {project.github && (
                     <a
                       href={project.github}
@@ -280,6 +297,7 @@ const Projects = () => {
                     </a>
                   )}
 
+                  {/* Live Demo */}
                   {project.demo && (
                     <a
                       href={project.demo}
@@ -294,6 +312,7 @@ const Projects = () => {
                     </a>
                   )}
 
+                  {/* Research Paper */}
                   {project.paper && (
                     <a
                       href={project.paper}
@@ -307,6 +326,7 @@ const Projects = () => {
                       </span>
                     </a>
                   )}
+
                 </div>
               </div>
             </motion.div>
