@@ -56,6 +56,29 @@ const Projects = () => {
         'https://her-way-soremo.vercel.app/',
       tag: 'SoReMo Fellowship'
     },
+    {
+      title: 'SayAway - Voice AI Travel Planner',
+      description:
+        'Built a voice-based travel planner that converts natural group conversations into structured itineraries. Integrated VAD for speech detection, local Whisper for transcription, Llama via Ollama for extracting travel preferences and Zod for schema validation. Added browser-based TTS, nearby place recommendations, distance calculations and Stay22 accommodation search without relying on paid AI inference APIs.',
+      tech: [
+        'Python',
+        'Whisper',
+        'Llama',
+        'Ollama',
+        'VAD',
+        'Zod',
+        'Browser TTS',
+        'Stay22',
+        'Local AI'
+      ],
+      image:
+        'https://images.unsplash.com/photo-1488646953014-85cb44e25828',
+      github:
+        'https://github.com/mishrasharanya/SayAway',
+      demo:
+        'https://www.loom.com/share/ce0fb83cbeb248a189956ae692fe2348',
+      tag: 'Hackathon Best Use Case'
+    },
 
     {
       title: 'VulnScope - CVE Severity Prediction',
@@ -101,29 +124,6 @@ const Projects = () => {
       demo:
         'https://forequest.streamlit.app/',
       tag: 'Quant + AI'
-    },
-
-    {
-      title: 'SayAway - Voice AI Travel Planner',
-      description:
-        'Built a voice-based travel planner that converts group conversations into structured itineraries. Used local Whisper for transcription, Llama via Ollama for extracting destinations, dates, budgets and accessibility needs, and Zod for schema validation. Integrated nearby place recommendations, distance calculations, browser TTS and Stay22 accommodation search without paid AI inference APIs.',
-      tech: [
-        'Whisper',
-        'Ollama',
-        'Llama',
-        'Zod',
-        'Web Speech API',
-        'Stay22',
-        'Speech-to-Text',
-        'Local AI'
-      ],
-      image:
-        'https://images.unsplash.com/photo-1488646953014-85cb44e25828',
-      github:
-        'https://github.com/mishrasharanya/SayAway',
-      demo:
-        'https://www.loom.com/share/ce0fb83cbeb248a189956ae692fe2348',
-      tag: 'Hackathon Best Use Case'
     },
 
     {
